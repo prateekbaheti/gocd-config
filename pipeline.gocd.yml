@@ -18,7 +18,6 @@ pipelines:
                 - node-java
               tasks:
                 - script: |
-                    yarn install
                     yarn run ci
       - build:
           jobs:
