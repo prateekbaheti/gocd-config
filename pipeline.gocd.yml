@@ -15,7 +15,7 @@ pipelines:
           jobs:
             test:
               resources:
-                - node-and-java
+                - node-java
               tasks:
                 - script: |
                     yarn install
@@ -24,16 +24,15 @@ pipelines:
           jobs:
             build:
               resources:
-                - node-and-java
+                - node-java
               tasks:
                 - script: |
                     yarn install
-                    yarn run build
       - deploy:
           jobs:
             deploy:
               resources:
-                - node-and-java
+                - node-java
               tasks:
                 - script: |
                     sh ./buildAndDeploy/deploy.sh team2-bootcamp-june2018
